@@ -1,0 +1,193 @@
+Twitter shows trends in order to make its users aware of the trending news. These trends are nothing but trending hashtags that the users are tweeting about. For example: If thousands of users are talking about United States by adding a hashtag #US in their tweet, then US will be a trending hashtag. Couple of example tweets with hashtag #US could be:
+
+Donald Trump becomes the 45th #US President Roger Federer wins #US Open for 5th time Given a list of N tweets, your task is to find top the five trending hashtags. Each tweet, let's call it S, will contain at least one one word with hashtag. There will be maximum of three hashtags in any tweet. All hashtags in a single tweet will be unique.
+
+Note: 1. Any tweet is composed of lowercase and uppercase English letters, digits and spaces. 2. Any hashtag begins with # and the subsequent characters will only contain lowercase and uppercase English letters and digits.
+
+Input Format
+
+First line of the input will contain N denoting the number of tweets. Next N lines, each will contain a string S.
+
+Constraints
+
+where S denotes length of string S i.e. length of tweet. Any hashtag denoted by H, where H denotes length of any hashtag H.
+
+Output Format
+
+Print the top five trending hashtags. In case of tie between any two hashtags, print them in lexicographical order in a new line.
+
+Sample Input 0
+
+10
+Donald Trump becomes the 45th #US President
+Potentially habitable exoplanet #ProximaB discovered
+#RogerFederer wins #US Open for 5th time
+#GravitationalWaves detection successful
+Traces of liquid water discovered on #Mars
+Life Could Survive on Exoplanet #ProximaB
+Go go #RogerFederer
+Ten ways #ProximaB is different from Earth
+ISRO becomes 4th space agency to reach #Mars
+#RogerFederer beats #Nadal
+Sample Output 0
+
+#ProximaB
+#RogerFederer
+#Mars
+#US
+#GravitationalWaves
+Explanation 0
+
+In the given sample test case, the count of occurrences of all the hashtags are:
+
+US: 2
+Mars: 2
+RogerFederer: 3
+ProximaB: 3
+Nadal: 1
+GravitationalWaves: 1
+Sort them by count and in case of tie in count we sort them in lexicographical order of hashtag. It means that Since #RogerFederer and #ProximaB has equal count, we compare the strings and since #ProximaB is lexicographically smaller than #RogerFederer, #ProximaB will have precedence over #RogerFederer.
+
+Final sorted order is:
+
+ProximaB: 3
+RogerFederer: 3
+Mars: 2
+US: 2
+GravitationalWaves: 1
+Nadal: 1
+Top 5 hashtags from the above list is the correct output.
+
+Sample Input 1
+
+100
+#Justo proin
+cum #Felis mauris platea nullam fames quisque sem cubilia ac consequat
+#Risus fusce
+mattis #dolor dui #Risus gravida
+ante #risus parturient justo #habitasse #Etiam lacinia lectus adipiscing
+#Justo ipsum
+sociis #dolor #vel #Risus
+tortor #Etiam #fames
+bibendum #Netus elementum neque natoque habitant rutrum ad nonummy fusce
+viverra tempus #cursus dictumst #massa #Justo
+dictumst #Velit #fames facilisis
+#Magna rhoncus nisl donec sem per proin porttitor purus
+donec #nulla eget leo neque enim #per #Porta
+mauris #Massa neque curae
+dis nullam #Velit arcu sed ligula penatibus #massa porta duis nostra
+lacus #Vitae #elit #purus
+parturient tempor #condimentum sit ac vestibulum #purus #Neque pulvinar hendrerit
+mattis #vitae torquent nullam eget nonummy aliquam nulla orci #porta ullamcorper eu netus interdum #Ipsum
+#class tempor #Lorem torquent facilisi dictum quis urna eu
+#metus #Justo aenean vehicula consectetuer nulla donec facilisis ut senectus
+#Porta natoque #velit morbi ante #ipsum quam
+vitae etiam sagittis #Etiam est iaculis #fames #pede penatibus
+magna #Augue
+#lacus per praesent orci quam taciti dis eget #eni #Netus pede
+#Dolor ipsum
+a id vehicula tristique pharetra #Proin vehicula sociis ullamcorper #risus
+#donec varius montes ultrices massa pharetra fames #Neque nam
+risus fusce semper nascetur #Donec risus ut vehicula semper
+#proin vivamus euismod proin vitae consequat congue sollicitudin #Purus lacus
+vel eleifend augue conubia #purus aptent #Velit #justo litora
+vehicula #sit elit facilisi cursus #Justo placerat #lorem
+ullamcorper nec purus tortor quam #vitae #Felis bibendum nisi
+natoque #class viverra #Etiam
+mauris aenean #purus ultricies eros class ipsum #Ipsum
+augue rutrum rhoncus #sapien #fames #Velit et
+#Massa adipiscing #fusce aptent leo leo
+urna nulla lectus at convallis fusce pulvinar maecenas #etiam magnis aptent #Massa
+augue egestas tempor #fusce #Curae cursus pellentesque parturient a pede sagittis
+at #Purus #donec #mus augue volutpat aliquam
+porta #Lacus in fusce #litora netus primis #velit
+aliquam eu vitae habitant primis augue est eros nulla enim #Netus pede mi
+tristique sit felis etiam blandit #lacus faucibus #Morbi ornare potenti aenean id id
+ligula #risus fermentum #neque luctus #Proin
+#porta #taciti #Metus elit
+#Fames cursus #ipsum sodales
+parturient tortor fusce eni pellentesque cubilia #Etiam
+justo volutpat #Class malesuada fusce nunc arcu
+#Augue justo #netus
+bibendum vel #Metus suscipit purus euismod
+#Neque ante hac ipsum #metus lacinia euismod mattis
+#Velit #magna nulla
+mattis blandit #purus duis #Neque urna eleifend sed
+tempus #velit augue donec #Vitae ridiculus habitasse non consequat a
+id #Massa #luctus rhoncus #class arcu
+molestie lectus #Risus lorem euismod nunc cras gravida ve
+ve venenatis maecenas fames #Fames iaculis duis eleifend fusce
+donec #Lacus posuere #velit proin mus
+#Lacus habitant sit neque
+vitae taciti #Lacus morbi purus proin #etiam aenean #sapien litora netus
+purus #Fames rutrum
+#ipsum #Fusce platea per lacus porttitor felis hendrerit at
+augue #Lorem
+fringilla #Lorem #purus dictum
+#magna diam ad #Porta nec
+ultrices magna #Proin dolor
+ve #augue dolor mollis sollicitudin proin sodales cubilia mus #Justo leo
+#fames quam ullamcorper ornare et laoreet magnis ad ad #placerat #Netus
+lacus suspendisse sagittis habitasse #Justo aliquam primis sagittis at phasellus urna mi
+purus lacus rhoncus varius lorem volutpat aenean lobortis ut ac montes #Metus
+nulla magnis #Fusce #fames justo
+morbi #Magna semper
+pharetra varius habitasse #etiam ornare #Vitae
+proin #Etiam
+#Class augue
+#Lorem lacinia neque
+#egestas #Class #risus duis dis
+#Lorem #justo accumsan #venenatis
+class #Neque lectus #ipsum
+nec tincidunt curae #massa accumsan #Ipsum
+a quam #Risus odio fames quisque luctus arcu parturient nullam aliquam blandit
+sit #class nam erat nam #Vitae eget praesent congue
+justo #Donec
+cum per hendrerit cras dis amet #dolor netus at a #Neque at
+massa #Risus
+nam #Massa donec donec justo taciti tellus augue
+dolor non dictumst fusce sollicitudin fusce #Netus orci a
+in #ipsum #Vitae mollis
+duis nostra etiam eros dolor vehicula #Porta pretium cras
+ipsum a #Netus orci dui diam
+phasellus lorem lobortis lectus natoque #Proin netus
+arcu aptent nam vitae nam #Donec
+lacus est erat #nec etiam #Curae #fusce
+ac eget erat duis felis a #Magna
+nibh fusce #vitae varius sollicitudin odio nullam id #Class velit mi
+id nec metus #Risus torquent risus
+#Etiam massa
+ac orci laoreet #Augue sit tortor tincidunt amet dui amet amet nisl iaculis facilisi bibendum etiam
+aenean ipsum rutrum #morbi scelerisque #Felis
+et #lacus primis #Neque
+scelerisque nulla #Porta at platea habitant
+Sample Output 1
+
+#Etiam
+#Justo
+#Neque
+#Risus
+#Netus
+
+
+
+my code:
+
+
+
+n=int(input())
+arr=[]
+arr1=[]
+for i in range(n):
+    l=list(input().split())
+    for j in l:
+        if(j[0]=="#" and j not in arr1):
+            arr.append([j,0])
+            arr1.append(j)
+        if j[0]=='#' and j in arr1:
+            p=arr1.index(j)
+            arr[p][1]+=1
+arr=sorted(arr,key=lambda x:x[0],reverse=False)
+arr=sorted(arr,key=lambda x:x[1],reverse=True)
+for k in arr[:5]:
+    print(k[0])
